@@ -44,9 +44,9 @@ function Registration({ cfg, page }: { cfg: PublicPagesConfig; page: PublicPageC
   const port = useMemo(() => createPublicPort(cfg, page), [cfg, page]);
 
   const form = useStepForm('kursteilnehmer', {
-    fields: ['vorname', 'nachname', 'email'],
-    required: { vorname: true, nachname: true, email: true },
-    steps: { vorname: 1, nachname: 1, email: 1 },
+    fields: ['vorname', 'nachname', 'email', 'gruppe'],
+    required: { vorname: true, nachname: true, email: true, gruppe: false },
+    steps: { vorname: 1, nachname: 1, email: 1, gruppe: 1 },
     messages: {
       vorname: tx('Bitte den Vornamen eingeben.'),
       nachname: tx('Bitte den Nachnamen eingeben.'),
@@ -86,9 +86,10 @@ function Registration({ cfg, page }: { cfg: PublicPagesConfig; page: PublicPageC
           <Bound form={form} name="vorname" />
           <Bound form={form} name="nachname" />
           <Bound form={form} name="email" />
+          <Bound form={form} name="gruppe" placeholder={tx('z. B. Montagsgruppe')} />
           <StepNav
             hideBack
-            onNext={() => form.validate(['vorname', 'nachname', 'email'])}
+            onNext={() => form.validate(['vorname', 'nachname', 'email', 'gruppe'])}
             nextStepLabel={tx('Prüfen')}
           />
         </div>

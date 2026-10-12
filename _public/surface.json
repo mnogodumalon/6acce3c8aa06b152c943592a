@@ -12,7 +12,8 @@
           "fields": [
             "vorname",
             "nachname",
-            "email"
+            "email",
+            "gruppe"
           ]
         }
       ]

@@ -19,7 +19,8 @@
       "Vielen Dank für deine Anmeldung!": "Thank you for your registration!",
       "Weitere Person anmelden": "Register another person",
       "Wir haben deine Anmeldung erhalten, {0}. Eine Bestätigung geht an {1}.": "We have received your registration, {0}. A confirmation will be sent to {1}.",
-      "Zuletzt angemeldet: {0} — insgesamt {1} Anmeldungen.": "Most recent registration: {0} — {1} registrations in total."
+      "Zuletzt angemeldet: {0} — insgesamt {1} Anmeldungen.": "Most recent registration: {0} — {1} registrations in total.",
+      "z. B. Montagsgruppe": "e.g. Monday group"
     }
   },
   "v": 1
