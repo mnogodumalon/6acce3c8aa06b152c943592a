@@ -1,0 +1,63 @@
+{
+  "appgroup_id": "6acce3c8aa06b152c943592a",
+  "appgroup_name": "Kursanmeldung",
+  "apps": {
+    "kursteilnehmer": {
+      "app_id": "6acce3b9f393404db3ff3348",
+      "name": "Kursteilnehmer",
+      "main": false,
+      "controls": {
+        "vorname": {
+          "identifier": "vorname",
+          "label": "Vorname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "nachname": {
+          "identifier": "nachname",
+          "label": "Nachname",
+          "type": "string",
+          "subtype": "text",
+          "fulltype": "string/text",
+          "description": "A string value not longer than 4000 characters (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": true,
+          "in_text": true,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        },
+        "email": {
+          "identifier": "email",
+          "label": "E-Mail-Adresse",
+          "type": "string",
+          "subtype": "email",
+          "fulltype": "string/email",
+          "description": "A valid email address (or `null`/`None`).",
+          "required": true,
+          "in_list": true,
+          "in_mobile_list": false,
+          "in_text": false,
+          "in_structured_search": null,
+          "in_fulltext_search": true,
+          "in_expert_search": true
+        }
+      }
+    }
+  },
+  "metadata": {
+    "apps_list": [
+      "Kursteilnehmer"
+    ]
+  }
+}

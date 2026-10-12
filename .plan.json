@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "language": "de",
+  "understanding": {
+    "summary": "Eine einfache Anwendung, mit der sich Interessierte über ein öffentliches Formular für eine Veranstaltung anmelden. Das Team sieht alle Anmeldungen als Teilnehmerliste.",
+    "roles": [
+      "Veranstaltungsteam",
+      "Interessierte (Besucher)"
+    ],
+    "main_tasks": [
+      "Öffentliches Anmeldeformular mit Vorname, Nachname und E-Mail-Adresse bereitstellen",
+      "Eingegangene Anmeldungen einsehen und verwalten",
+      "Teilnehmerliste als Datei weitergeben"
+    ],
+    "platform_roles": [
+      {
+        "persona": "Veranstaltungsteam",
+        "role": "datenverarbeitung",
+        "apps": [
+          "kursteilnehmer"
+        ]
+      }
+    ]
+  },
+  "flows": [],
+  "public_pages": [
+    {
+      "slug": "kursanmeldung",
+      "purpose": "Öffentliches Anmeldeformular: Besucher tragen Vorname, Nachname und E-Mail-Adresse ein und melden sich damit für die Veranstaltung an. Es wird keine Liste angezeigt, keine Verfügbarkeit geprüft und keine Daten anderer Teilnehmer gezeigt.",
+      "publish": true,
+      "lists": [],
+      "creates": [
+        {
+          "entity": "kursteilnehmer",
+          "fields": {
+            "vorname": "user",
+            "nachname": "user",
+            "email": "user"
+          },
+          "fixed": {}
+        }
+      ],
+      "brief": "# Public page `kursanmeldung`\nÖffentliches Anmeldeformular: Besucher tragen Vorname, Nachname und E-Mail-Adresse ein und melden sich damit für die Veranstaltung an. Es wird keine Liste angezeigt, keine Verfügbarkeit geprüft und keine Daten anderer Teilnehmer gezeigt.\n\n## Creates (declare exactly these in the surface)\n- `kursteilnehmer`: visitor fields `vorname`, `nachname`, `email`\n\n## Availability — mechanical, write nothing for it\nA picker (`useRecordSearch`) never offers a record another record already takes (a booked slot) — the layer leaves it out. To SHOW booked periods, call `useOccupancy(port, '<entity>')` and hand `blocked` to AvailabilityRangePicker; the integration gives the page exactly that read (dates or the reference, never who booked). Never declare a list of bookings with names or contacts to work availability out yourself.\n\nPublish: yes\n"
+    }
+  ],
+  "tools": [],
+  "covered_by_platform": [
+    {
+      "wish": "Anmeldungen einsehen, suchen und sortieren",
+      "feature": "list_page"
+    },
+    {
+      "wish": "Teilnehmerliste weitergeben oder exportieren",
+      "feature": "csv_json_export"
+    },
+    {
+      "wish": "Teilnehmer manuell erfassen oder korrigieren",
+      "feature": "record_form"
+    }
+  ],
+  "ownership": {},
+  "dashboard": {
+    "focus": [
+      "Anzahl der Anmeldungen",
+      "Neueste Anmeldungen"
+    ],
+    "hints": [
+      "Das öffentliche Anmeldeformular ist der wichtigste Zugang",
+      "Die Teilnehmerliste lässt sich über die Listenseite exportieren"
+    ],
+    "wishes": []
+  }
+}

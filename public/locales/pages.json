@@ -1,0 +1,17 @@
+{
+  "pages": {
+    "en": {
+      "Anmeldungen": "Registrations",
+      "Ersten Teilnehmer erfassen": "Add first participant",
+      "Keine Treffer für diese Auswahl.": "No results for this selection.",
+      "Name oder E-Mail suchen": "Search name or email",
+      "Neu (7 Tage)": "New (7 days)",
+      "Neu dabei: {0} — insgesamt {1} Anmeldungen.": "New: {0} — {1} registrations in total.",
+      "Noch keine Anmeldungen — sobald sich jemand einträgt, erscheint er hier.": "No registrations yet — as soon as someone signs up, they will appear here.",
+      "Noch keine Anmeldungen. Lege den ersten Teilnehmer an.": "No registrations yet. Add the first participant.",
+      "Teilnehmer hinzufügen": "Add participant",
+      "Zuletzt angemeldet: {0} — insgesamt {1} Anmeldungen.": "Latest registration: {0} — {1} registrations in total."
+    }
+  },
+  "v": 1
+}
