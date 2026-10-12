@@ -18,7 +18,7 @@ export type EntityKey = 'kursteilnehmer';
 /** The text fields of each entity — what a search may run over (generated;
  *  `never` for an entity without text of its own, e.g. a link table). */
 export interface StringFields {
-  "kursteilnehmer": "vorname" | "nachname" | "email";
+  "kursteilnehmer": "vorname" | "nachname" | "email" | "gruppe";
 }
 export type StringFieldKey<E extends EntityKey> = E extends keyof StringFields ? StringFields[E] : never;
 
@@ -129,6 +129,14 @@ export const FIELD_RULES: Record<EntityKey, Record<string, FieldRule>> = {
       "label": "E-Mail-Adresse",
       "writable": true,
       "autoComplete": "email"
+    },
+    "gruppe": {
+      "key": "gruppe",
+      "fulltype": "string/textarea",
+      "kind": "textarea",
+      "required": false,
+      "label": "Gruppe",
+      "writable": true
     }
   }
 };

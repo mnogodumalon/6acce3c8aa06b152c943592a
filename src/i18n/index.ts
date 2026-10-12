@@ -1604,7 +1604,8 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "fields": {
           "vorname": "Vorname",
           "nachname": "Nachname",
-          "email": "E-Mail-Adresse"
+          "email": "E-Mail-Adresse",
+          "gruppe": "Gruppe"
         },
         "lookups": {}
       }
@@ -1619,7 +1620,8 @@ export const LABELS: Record<CoreLocale, LabelBundle> = {
         "fields": {
           "vorname": "Vorname",
           "nachname": "Nachname",
-          "email": "E-Mail-Adresse"
+          "email": "E-Mail-Adresse",
+          "gruppe": "Gruppe"
         },
         "lookups": {}
       }

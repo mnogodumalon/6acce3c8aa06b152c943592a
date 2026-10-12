@@ -23,7 +23,7 @@ import { labelOf, type EntityKey } from './rules';
 
 /** The writable fields of each entity — the keys a message may address (generated). */
 export interface MessageFields {
-  "kursteilnehmer": "vorname" | "nachname" | "email";
+  "kursteilnehmer": "vorname" | "nachname" | "email" | "gruppe";
 }
 export type MessageFieldKey<E extends EntityKey> = E extends keyof MessageFields ? MessageFields[E] : never;
 

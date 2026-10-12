@@ -222,7 +222,7 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
         }
       }
       const photoContext = contextParts.length ? contextParts.join('\n') : undefined;
-      const schema = `{\n  "vorname": string | null, // Vorname\n  "nachname": string | null, // Nachname\n  "email": string | null, // E-Mail-Adresse\n}`;
+      const schema = `{\n  "vorname": string | null, // Vorname\n  "nachname": string | null, // Nachname\n  "email": string | null, // E-Mail-Adresse\n  "gruppe": string | null, // Gruppe\n}`;
       const raw = await extractFromInput<Record<string, unknown>>(schema, {
         dataUri: uri,
         userText: aiText.trim() || undefined,
@@ -331,6 +331,18 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
         )}
       </div>
     ),
+    'gruppe': (
+      <div key="gruppe" className="space-y-1.5">
+        <Label htmlFor="gruppe">{fieldLabel('kursteilnehmer', 'gruppe')}</Label>
+        <Textarea
+          id="gruppe"
+          placeholder=""
+          value={fields.gruppe ?? ''}
+          onChange={e => setFields(f => ({ ...f, gruppe: e.target.value }))}
+          rows={3}
+        />
+      </div>
+    ),
   };
   const orderedFields = applyFieldOrder(Object.keys(fieldBlocks), formEnhancements.fieldOrder);
   const orderedFieldsKey = orderedFields.map((it) => typeof it === 'string' ? it : it.row.join('+')).join(',');
@@ -345,7 +357,7 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
   //     kein passendes Backend-Feld in orderedFields) erscheinen NICHT als
   //     Input, sondern unten als kompakte 'Berechnungen'-Übersicht oder als
   //     Inline-Hint unter dem letzten beitragenden Input.
-  const FIELD_LABELS: Record<string, string> = {"vorname": "Vorname", "nachname": "Nachname", "email": "E-Mail-Adresse"};
+  const FIELD_LABELS: Record<string, string> = {"vorname": "Vorname", "nachname": "Nachname", "email": "E-Mail-Adresse", "gruppe": "Gruppe"};
   const CURRENCY_KEYS = new Set<string>([]);
   // Applookup-Referenz-Labels: pro applookup-Feld in dieser Form (ownKey)
   // eine Map { lookupKey: label } für ALLE Felder des Target-Schemas. Wird

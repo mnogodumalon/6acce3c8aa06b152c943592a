@@ -41,7 +41,7 @@
  *
  * Overlay content per entity (the host renders these — you never compose
  * Details blocks yourself):
- *   kursteilnehmer: vorname, nachname, email
+ *   kursteilnehmer: vorname, nachname, email, gruppe
  */
 import { useState, type ReactNode } from 'react';
 import type { Kursteilnehmer } from '@/types/app';

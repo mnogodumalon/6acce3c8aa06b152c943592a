@@ -41,6 +41,7 @@ export interface Kursteilnehmer {
     vorname?: string;
     nachname?: string;
     email?: string;
+    gruppe?: string;
   };
 }
 
@@ -56,6 +57,7 @@ export const FIELD_TYPES: Record<string, Record<string, string>> = {
     'vorname': 'string/text',
     'nachname': 'string/text',
     'email': 'string/email',
+    'gruppe': 'string/textarea',
   },
 };
 

@@ -23,6 +23,11 @@
           "key": "email",
           "label": "E-Mail-Adresse",
           "type": "string/email"
+        },
+        {
+          "key": "gruppe",
+          "label": "Gruppe",
+          "type": "string/textarea"
         }
       ],
       "formEnhancements": {
@@ -45,6 +50,12 @@
             "label": "E-Mail-Adresse",
             "type": "string/email",
             "required": true
+          },
+          {
+            "key": "gruppe",
+            "label": "Gruppe",
+            "type": "string/textarea",
+            "required": false
           }
         ]
       }

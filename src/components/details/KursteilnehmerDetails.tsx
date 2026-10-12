@@ -23,6 +23,7 @@ export function KursteilnehmerDetails({
         <RecordField label={fieldLabel('kursteilnehmer', 'vorname')} value={record.fields.vorname} format="text" />
         <RecordField label={fieldLabel('kursteilnehmer', 'nachname')} value={record.fields.nachname} format="text" />
         <RecordField label={fieldLabel('kursteilnehmer', 'email')} value={record.fields.email} format="email" />
+        <RecordField label={fieldLabel('kursteilnehmer', 'gruppe')} value={record.fields.gruppe} format="longtext" className="md:col-span-2" />
       </RecordSection>
 
       <RecordAttachments appId={APP_IDS.KURSTEILNEHMER} recordId={record.record_id} readOnly={!perms.canWrite('kursteilnehmer')} />
