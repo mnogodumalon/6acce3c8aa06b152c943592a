@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "pages": [
+    {
+      "slug": "kursanmeldung",
+      "component": "Kursanmeldung",
+      "title": "Kursanmeldung",
+      "endpoints": [
+        {
+          "entity": "kursteilnehmer",
+          "op": "create",
+          "fields": [
+            "vorname",
+            "nachname",
+            "email"
+          ]
+        }
+      ]
+    }
+  ]
+}
