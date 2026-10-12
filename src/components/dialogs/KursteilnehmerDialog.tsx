@@ -289,7 +289,7 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="vorname">{fieldLabel('kursteilnehmer', 'vorname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="vorname"
-          placeholder="z. B. Anna"
+          placeholder=""
           value={fields.vorname ?? ''}
           onChange={e => setFields(f => ({ ...f, vorname: e.target.value }))}
           required
@@ -304,7 +304,7 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
         <Label htmlFor="nachname">{fieldLabel('kursteilnehmer', 'nachname')} <span className="text-destructive" aria-hidden="true">*</span></Label>
         <Input
           id="nachname"
-          placeholder="z. B. Müller"
+          placeholder=""
           value={fields.nachname ?? ''}
           onChange={e => setFields(f => ({ ...f, nachname: e.target.value }))}
           required
@@ -321,7 +321,7 @@ export function KursteilnehmerDialog({ open, onClose, onSubmit, defaultValues, r
           id="email"
           type="email"
           inputMode="email"
-          placeholder="z. B. anna.mueller@beispiel.de"
+          placeholder=""
           value={fields.email ?? ''}
           onChange={e => setFields(f => ({ ...f, email: e.target.value }))}
           required

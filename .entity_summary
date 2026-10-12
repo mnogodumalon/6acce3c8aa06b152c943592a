@@ -51,5 +51,5 @@ There is NO `@/config/appIds`, no `@/config/lookupOptions` and no
 createRecordUrl from the service. Note the lowercase `l` in the service path.
 
 - Kursteilnehmer (kursteilnehmer): vorname!^[string/text], nachname!^[string/text], email!^[string/email] "E-Mail-Adresse"
-  ≡ 3 records at build time
+  ≡ 6 records at build time
   ⚙ getKursteilnehmer() · getKursteilnehmerEntry(id) · createKursteilnehmerEntry(fields) · updateKursteilnehmerEntry(id, fields) · deleteKursteilnehmerEntry(id) · queryKursteilnehmer({ filter, orderby, limit, offset, fields }) · countKursteilnehmer(filter?)
