@@ -437,7 +437,26 @@ export async function getAppGroups(): Promise<AppGroupInfo[]> {
 export class LivingAppsService {
   // --- KURSTEILNEHMER ---
   static async getKursteilnehmer(): Promise<Kursteilnehmer[]> {
-    const data = await callApi('GET', `/apps/${APP_IDS.KURSTEILNEHMER}/records`);
+    const path = `/apps/${APP_IDS.KURSTEILNEHMER}/records`;
+    let data: Record<string, any>;
+    try {
+      data = await callApi('GET', path, undefined, { silent: true });
+    } catch (e) {
+      // A record without created_by makes the server fail the whole list (500).
+      // Load record by record and skip only the unreadable ones.
+      if (!(e instanceof LivingAppsApiError) || !/created_by/.test(e.message)) {
+        return Promise.reject(await callApi('GET', path).then(() => e, err => err));
+      }
+      data = {};
+      for (let offset = 0; offset < 2000; offset++) {
+        let page: Record<string, any>;
+        try {
+          page = await callApi('GET', `${path}${recordQueryString({ limit: 1, offset })}`, undefined, { silent: true });
+        } catch { continue; }
+        if (!page || Object.keys(page).length === 0) break;
+        Object.assign(data, page);
+      }
+    }
     const records = Object.entries(data).map(([id, rec]: [string, any]) => ({
       record_id: id, ...rec,
       createdat: rec.created_at ?? '', updatedat: rec.updated_at ?? null,
