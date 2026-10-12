@@ -1,12 +1,14 @@
 {
   "pages": {
     "en": {
-      "Anmeldung eingegangen": "Registration received",
       "Anmeldungen": "Registrations",
-      "Deine Daten": "Your details",
+      "Bitte den Nachnamen eingeben.": "Please enter the last name.",
+      "Bitte den Vornamen eingeben.": "Please enter the first name.",
+      "Bitte die E-Mail-Adresse eingeben.": "Please enter the email address.",
+      "Deine Angaben": "Your details",
       "Ersten Teilnehmer erfassen": "Add first participant",
       "Keine Treffer für diese Auswahl.": "No results for this selection.",
-      "Mit dem Absenden ist deine Anmeldung abgeschlossen.": "Submitting completes your registration.",
+      "Mit dem Absenden meldest du dich zum Kurs an.": "By submitting, you register for the course.",
       "Name oder E-Mail suchen": "Search name or email",
       "Neu (7 Tage)": "New (7 days)",
       "Neu dabei: {0} — insgesamt {1} Anmeldungen.": "New: {0} — {1} registrations in total.",
@@ -14,7 +16,9 @@
       "Noch keine Anmeldungen. Lege den ersten Teilnehmer an.": "No registrations yet. Add the first participant.",
       "Prüfen": "Review",
       "Teilnehmer hinzufügen": "Add participant",
-      "Weitere Anmeldung": "Another registration",
+      "Vielen Dank für deine Anmeldung!": "Thank you for your registration!",
+      "Weitere Person anmelden": "Register another person",
+      "Wir haben deine Anmeldung erhalten, {0}. Eine Bestätigung geht an {1}.": "We have received your registration, {0}. A confirmation will be sent to {1}.",
       "Zuletzt angemeldet: {0} — insgesamt {1} Anmeldungen.": "Latest registration: {0} — {1} registrations in total."
     }
   },
